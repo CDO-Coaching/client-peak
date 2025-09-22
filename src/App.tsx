@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { AuthForm } from "@/components/auth/AuthForm";
 import { ClientDashboard } from "@/pages/client/ClientDashboard";
+import { MobileClientDashboard } from "@/pages/client/MobileClientDashboard";
 import { SessionView } from "@/pages/client/SessionView";
 import { FeedbackForm } from "@/pages/client/FeedbackForm";
 import { WellnessForm } from "@/pages/client/WellnessForm";
@@ -59,7 +60,7 @@ const AuthenticatedApp = () => {
       ) : (
         <>
           <Route path="/" element={<Navigate to="/client" replace />} />
-          <Route path="/client" element={<ClientDashboard />} />
+          <Route path="/client" element={<MobileClientDashboard />} />
           <Route path="/client/session/:sessionId" element={<SessionView />} />
           <Route path="/client/feedback" element={<FeedbackForm />} />
           <Route path="/client/wellness" element={<WellnessForm />} />
