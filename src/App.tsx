@@ -10,6 +10,9 @@ import { ClientDashboard } from "@/pages/client/ClientDashboard";
 import { SessionView } from "@/pages/client/SessionView";
 import { FeedbackForm } from "@/pages/client/FeedbackForm";
 import { WellnessForm } from "@/pages/client/WellnessForm";
+import { History } from "@/pages/client/History";
+import { Statistics } from "@/pages/client/Statistics";
+import { Goals } from "@/pages/client/Goals";
 import { CoachDashboard } from "@/pages/coach/CoachDashboard";
 import NotFound from "./pages/NotFound";
 
@@ -55,7 +58,9 @@ const AuthenticatedApp = () => {
           <Route path="/client/session/:sessionId" element={<SessionView />} />
           <Route path="/client/feedback" element={<FeedbackForm />} />
           <Route path="/client/wellness" element={<WellnessForm />} />
-          <Route path="/client/history" element={<div>History (à implémenter)</div>} />
+          <Route path="/client/history" element={<History />} />
+          <Route path="/client/statistics" element={<Statistics />} />
+          <Route path="/client/goals" element={<Goals />} />
         </>
       )}
       <Route path="*" element={<NotFound />} />

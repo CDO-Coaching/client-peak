@@ -160,19 +160,23 @@ export const ClientDashboard = () => {
                     </Button>
                   </Link>
                   
-                  <Button variant="outline" className="w-full h-20 rounded-xl border-2 hover:border-primary hover:bg-accent transition-colors">
-                    <div className="text-center">
-                      <TrendingUp className="h-6 w-6 mx-auto mb-2 text-success" />
-                      <p className="font-medium">Statistiques</p>
-                    </div>
-                  </Button>
+                  <Link to="/client/statistics">
+                    <Button variant="outline" className="w-full h-20 rounded-xl border-2 hover:border-primary hover:bg-accent transition-colors">
+                      <div className="text-center">
+                        <TrendingUp className="h-6 w-6 mx-auto mb-2 text-success" />
+                        <p className="font-medium">Statistiques</p>
+                      </div>
+                    </Button>
+                  </Link>
                   
-                  <Button variant="outline" className="w-full h-20 rounded-xl border-2 hover:border-primary hover:bg-accent transition-colors">
-                    <div className="text-center">
-                      <Target className="h-6 w-6 mx-auto mb-2 text-warning" />
-                      <p className="font-medium">Objectifs</p>
-                    </div>
-                  </Button>
+                  <Link to="/client/goals">
+                    <Button variant="outline" className="w-full h-20 rounded-xl border-2 hover:border-primary hover:bg-accent transition-colors">
+                      <div className="text-center">
+                        <Target className="h-6 w-6 mx-auto mb-2 text-warning" />
+                        <p className="font-medium">Objectifs</p>
+                      </div>
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
