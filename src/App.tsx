@@ -17,6 +17,7 @@ const queryClient = new QueryClient();
 
 const AuthenticatedApp = () => {
   const { user, loading } = useAuth();
+  const [authMode, setAuthMode] = useState<'signin' | 'signup'>('signin');
   
   if (loading) {
     return (
@@ -27,8 +28,6 @@ const AuthenticatedApp = () => {
   }
 
   if (!user) {
-    const [authMode, setAuthMode] = useState<'signin' | 'signup'>('signin');
-    
     return (
       <AuthForm 
         mode={authMode} 
