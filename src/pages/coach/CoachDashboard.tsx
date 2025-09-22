@@ -177,19 +177,23 @@ export const CoachDashboard = () => {
 
             {/* Actions rapides */}
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              <Button variant="outline" className="h-20 rounded-xl border-2 hover:border-primary hover:bg-accent transition-colors">
-                <div className="text-center">
-                  <Users className="h-6 w-6 mx-auto mb-2 text-primary" />
-                  <p className="font-medium">Gérer Clients</p>
-                </div>
-              </Button>
+              <Link to="/coach/clients">
+                <Button variant="outline" className="h-20 rounded-xl border-2 hover:border-primary hover:bg-accent transition-colors">
+                  <div className="text-center">
+                    <Users className="h-6 w-6 mx-auto mb-2 text-primary" />
+                    <p className="font-medium">Gérer Clients</p>
+                  </div>
+                </Button>
+              </Link>
               
-              <Button variant="outline" className="h-20 rounded-xl border-2 hover:border-primary hover:bg-accent transition-colors">
-                <div className="text-center">
-                  <Calendar className="h-6 w-6 mx-auto mb-2 text-warning" />
-                  <p className="font-medium">Planifier</p>
-                </div>
-              </Button>
+              <Link to="/coach/schedule">
+                <Button variant="outline" className="h-20 rounded-xl border-2 hover:border-primary hover:bg-accent transition-colors">
+                  <div className="text-center">
+                    <Calendar className="h-6 w-6 mx-auto mb-2 text-warning" />
+                    <p className="font-medium">Planifier</p>
+                  </div>
+                </Button>
+              </Link>
               
               <Button variant="outline" className="h-20 rounded-xl border-2 hover:border-primary hover:bg-accent transition-colors">
                 <div className="text-center">

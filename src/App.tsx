@@ -14,6 +14,9 @@ import { History } from "@/pages/client/History";
 import { Statistics } from "@/pages/client/Statistics";
 import { Goals } from "@/pages/client/Goals";
 import { CoachDashboard } from "@/pages/coach/CoachDashboard";
+import { ClientProfile } from "@/pages/coach/ClientProfile";
+import { ClientManagement } from "@/pages/coach/ClientManagement";
+import { Schedule } from "@/pages/coach/Schedule";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -49,7 +52,9 @@ const AuthenticatedApp = () => {
         <>
           <Route path="/" element={<Navigate to="/coach" replace />} />
           <Route path="/coach" element={<CoachDashboard />} />
-          <Route path="/coach/client/:clientId" element={<div>Client Profile (à implémenter)</div>} />
+          <Route path="/coach/client/:clientId" element={<ClientProfile />} />
+          <Route path="/coach/clients" element={<ClientManagement />} />
+          <Route path="/coach/schedule" element={<Schedule />} />
         </>
       ) : (
         <>
