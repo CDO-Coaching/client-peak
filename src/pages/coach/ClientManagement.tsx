@@ -66,10 +66,9 @@ export const ClientManagement = () => {
       
       // Fetch clients
       const { data: clientsData, error: clientsError } = await supabase
-        .from('coach_clients_view')
+        .from('client_programme_full_view')
         .select('*')
-        .eq('coach_id', user?.id)
-        .order('created_at', { ascending: false });
+        .order('programme_created_at', { ascending: false });
 
       if (clientsError) throw clientsError;
 
